@@ -6,13 +6,6 @@
 #include <stdio.h>
 #include <time.h>
 
-/**
- * Iterative implementation for nth fibonacci number
- * 
- * @param n
- * @return
- */
-
 long fibonacciIterative (int n) {
 	clock_t start, end, total;
 	start = clock();
@@ -31,12 +24,6 @@ long fibonacciIterative (int n) {
 	return total = (double)(end - start) / CLOCKS_PER_SEC;
 }
 
-/**
- * Recursive implementation for nth fibonacci number
- * 
- * @param n
- * @return
- */
 long fibonacciRecursive (int n) {
 	clock_t end, start, total;
 	int sum;
