@@ -40,14 +40,14 @@ int main (void)
 {
 
 	printf("Iterative version: \n");
-	printf("Total time with n=35: %ld\n", fibonacciIterative(35));
-	printf("Total time with n=45: %ld\n", fibonacciIterative(45));
+	printf("Total time with n=35: %ld\n", fibonacciIterative (35));
+	printf("Total time with n=45: %ld\n", fibonacciIterative (45));
 	
 	printf("\n");
 
 	printf("Recursive version: \n");
-	printf("Total time with n=35: %ld\n", fibonacciRecursive(35));
-	printf("Total time with n=45: %ld\n", fibonacciRecursive(45));
+	printf("Total time with n=35: %ld\n", fibonacciRecursive (35));
+	printf("Total time with n=45: %ld\n", fibonacciRecursive (45));
 
 	printf("\n");
 

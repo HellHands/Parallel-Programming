@@ -1,10 +1,15 @@
+/* Description of the content of the file and important remarks. *
+ * File: <exercise01.c>                Author:  <Prithvi Raj Moorani>
+ * Date: <20 October 2017>                     Version: <01>
+ */
+
 #include <stdio.h>
  
-int main(void)
+int main (void)
 {
-  	int P=4;
-	int Q=6;
-	int R=8;
+  int P = 4;
+	int Q = 6;
+	int R = 8;
 	int a[P][Q], b[Q][R], c[P][R];
 	int sum;
 
@@ -89,57 +94,49 @@ int main(void)
 	b[5][5]=6;
 	b[5][6]=7;
 	b[5][7]=8;
-
-
 	
-	printf("Array A!\n");
-	for(int i=0; i<P; i++)
+	printf ("Array A!\n");
+	for (int i = 0; i < P; i++)
 	{
-		for(int j=0; j<Q; j++){
-			printf("%d \t", a[i][j]);
+		for (int j = 0; j < Q; j++){
+			printf ("%d \t", a[i][j]);
 		}		
-		printf("\n\n");
+		printf ("\n\n");
 	}
 	
-	printf("Arraz B!\n");
-	for(int i=0; i<Q; i++)
+	printf ("Arraz B!\n");
+	for (int i = 0; i < Q; i++)
 	{
-		for(int j=0; j<R; j++){
-			printf("%d \t", b[i][j]);
+		for (int j = 0; j < R; j++){
+			printf ("%d \t", b[i][j]);
 		}		
-		printf("\n\n");
+		printf ("\n\n");
 	}
 
-	
-	for(int row=0; row<P; row++)
+	for (int row = 0; row < P; row++)
 	{
-		for(int col=0; col<R; col++)
+		for (int col = 0; col < R; col++)
 		{
 		    sum = 0;
 		    
-		    for(int i=0; i<Q; i++)
+		    for (int i=0; i<Q; i++)
 		    {
-			sum += a[row][i] * b[i][col];
+					sum += a[row][i] * b[i][col];
 		    }
-
+		    
 		    c[row][col] = sum;
 		}
 	}
 
-	printf("Arraz C!\n");
-	for(int i=0; i<P; i++)
+	printf ("Arraz C!\n");
+	for (int i = 0; i < P; i++)
 	{
-		for(int j=0; j<R; j++){
-			printf("%d \t", c[i][j]);
+		for (int j = 0; j < R; j++){
+			printf ("%d \t", c[i][j]);
 		}		
-		printf("\n\n");
+		printf ("\n\n");
 	}
-
-	
-
-	printf("\n");
-	
-
+	printf ("\n");
  
   return 0;
 }

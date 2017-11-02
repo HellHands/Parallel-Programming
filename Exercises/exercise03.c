@@ -23,33 +23,33 @@ double selectionSort (int *arrayToSort, int sizeOfArray) //SelectionSort
 	start = clock();
 
 	// loop through all numbers 
-   	for(int i = 0; i < sizeOfArray; i++) 
-   	{ 	
-    	// set current element as minimum 
-      	MIN = i;
-		
-      	// check the element to be minimum 
-      	for(int j = i + 1; j < sizeOfArray; j++) 
-      	{
-        	if(arrayToSort[j] < arrayToSort[MIN]) 
-        	{
-        		MIN = j;
-        	}
-      	}
+ 	for (int i = 0; i < sizeOfArray; i++) 
+ 	{ 	
+  	// set current element as minimum 
+    MIN = i;
 
-      	if(MIN != i) 
-      	{
-        	//printf("Items swapped: [ %d, %d ]\n" , arrayToSort[i], arrayToSort[MIN]); 			
-        	// swap the numbers 
-        	temp = arrayToSort[MIN];
-        	arrayToSort[MIN] = arrayToSort[i];
-        	arrayToSort[i] = temp;
-      	}          
-      	//printf("Iteration %d#:",(i+1));
-   	}
+  	// check the element to be minimum 
+  	for (int j = i + 1; j < sizeOfArray; j++) 
+  	{
+    	if (arrayToSort[j] < arrayToSort[MIN]) 
+    	{
+    		MIN = j;
+    	}
+  	}
 
-   	end = clock();
-	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+  	if(MIN != i) 
+  	{
+    	//printf("Items swapped: [ %d, %d ]\n" , arrayToSort[i], arrayToSort[MIN]); 			
+    	// swap the numbers 
+    	temp = arrayToSort[MIN];
+    	arrayToSort[MIN] = arrayToSort[i];
+    	arrayToSort[i] = temp;
+  	}          
+  	//printf("Iteration %d#:",(i+1));
+ 	}
+
+	end = clock();
+	cpu_time_used = (((double) (end - start)) / CLOCKS_PER_SEC);
 
 	return cpu_time_used;
 }
@@ -85,7 +85,7 @@ double bubbleSort (int *arrayToSort, int sizeOfArray) 	//BubbleSort Function
 	}
 	
 	end = clock();
-	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+	cpu_time_used = (((double) (end - start)) / CLOCKS_PER_SEC);
 
 	return cpu_time_used;
 }
